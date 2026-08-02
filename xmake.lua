@@ -1,12 +1,14 @@
 -- ## FAadd_rules("mode.debug", "mode.release")
 
-add_requires("raylib 6.0") -- или просто "raylib"
+add_requires("raylib 6.0")
+add_requires("raygui")
 
 target("image_viewer")
 set_kind("binary")
 set_languages("c11")
 add_files("src/*.c")
-add_packages("raylib") -- ← обязательно!Q
+add_packages("raylib")
+add_packages("raygui")
 --
 -- You can enter the project directory firstly before building project.
 --
