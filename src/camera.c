@@ -14,30 +14,30 @@ void route_keys(Camera2D *camera, int *zoomMode) {
   }
 
   if (IsKeyDown(KEY_EQUAL)) {
-    float scale = 0.008f;
+    float scale = 0.03f;
     camera->zoom = camera->zoom + scale;
   }
 
   if (IsKeyDown(KEY_MINUS)) {
-    float scale = 0.008f;
+    float scale = 0.03f;
     camera->zoom = camera->zoom - scale;
   }
 
   int count = 3;
 
-  if (IsKeyDown(KEY_W) || IsKeyDown(KEY_UP)) {
+  if (IsKeyDown(KEY_W)) {
     camera->target.y -= count;
   }
 
-  if (IsKeyDown(KEY_S) || IsKeyDown(KEY_DOWN)) {
+  if (IsKeyDown(KEY_S)) {
     camera->target.y += count;
   }
 
-  if (IsKeyDown(KEY_A) || IsKeyDown(KEY_LEFT)) {
+  if (IsKeyDown(KEY_A)) {
     camera->target.x -= count;
   }
 
-  if (IsKeyDown(KEY_D) || IsKeyDown(KEY_RIGHT)) {
+  if (IsKeyDown(KEY_D)) {
     camera->target.x += count;
   }
 
